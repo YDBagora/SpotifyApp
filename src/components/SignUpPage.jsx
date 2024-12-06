@@ -93,7 +93,7 @@ const LogoTxt = styled(Typography)(({ theme }) => ({
 const Btn = styled(Button)(({ theme }) => ({
   width: '60%',
   borderRadius: '80px',
-  background: '121212',
+  background: '#121212',
   color: 'white',
   border: '1px solid white',
   padding: '8px',
@@ -105,7 +105,7 @@ const Btn = styled(Button)(({ theme }) => ({
 }))
 
 const InpLabel = styled(InputLabel)(({ theme }) => ({
-  background: '121212',
+  background: '#121212',
   color: 'white',
   textTransform: 'none',
   fontSize: '13px',
@@ -113,7 +113,7 @@ const InpLabel = styled(InputLabel)(({ theme }) => ({
 }))
 
 const TxtFiled = styled(TextField)(({ theme }) => ({
-  background: '121212',
+  background: '#121212',
   color: 'white',
   '&:hover': {
     backgroundColor: '#121212',
@@ -123,7 +123,7 @@ const TxtFiled = styled(TextField)(({ theme }) => ({
     color: 'white',
   },
   '& .MuiInputBase-input': {
-    color: 'white',
+    color: 'white',  
   },
   alignItems: 'center',
   border: '1px solid white',

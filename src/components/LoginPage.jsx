@@ -129,7 +129,7 @@ const TxtFiled = styled(TextField)(({ theme }) => ({
     color: 'white',
   },
   '& .MuiInputBase-input': {
-    color: 'white',
+    color: 'white',  
   },
   alignItems: 'center',
   border: '1px solid white',
