@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
+import React, { useState, useEffect } from 'react';
+import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -14,12 +14,24 @@ import HomeIcon from '@mui/icons-material/Home';
 import { SideBarPage } from './SideBarPage';
 import { ContentPage } from './ContentPage';
 import { FooterPage } from './FooterPage';
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export default function HomePage() {
+  const [refresh, setRefresh] = useState(false);
+
+  React.useEffect(() => {
+    if (refresh) {
+      window.location.reload();
+    }
+  }, [refresh]);
+
+  const refreshPage = () => {
+    setRefresh(true);
+  }
+
   return (
-    <Box sx={{ flexGrow: 1, backgroundColor: 'black', height: 'auto' }}>
+    <Box sx={{ flexGrow: 1, backgroundColor: 'black', height: 'auto',}}>
       <Grid container spacing={2} sx={{ textAlign: 'center', alignItems: 'center', }}>
         <Box sx={{ flexGrow: 1 }}>
           <AppBar sx={{ backgroundColor: "black" }}>
@@ -29,8 +41,10 @@ export default function HomePage() {
                   <LibraryMusicIcon sx={{ fontSize: '30px' }} />
                 </IconButton>
               </Grid>
-              <Grid item xs={8}>
-                <IconBtn><HomeIcon sx={{ fontSize: '30px' }} /></IconBtn>
+              <GridContent item xs={8}>
+                <IconBtn onClick={refreshPage}>
+                  <HomeIcon sx={{ fontSize: '30px' }} />
+                </IconBtn>
                 <TxtFiled type='text' placeholder='What do you want to play?' focused variant="standard"
                   slotProps={{
                     input: {
@@ -42,7 +56,7 @@ export default function HomePage() {
                     },
                   }}
                 />
-              </Grid>
+              </GridContent>
               <Grid item xs={3}>
                 <Link to="/Signup">
                   <Btn1><b>Sign up</b></Btn1>
@@ -55,11 +69,11 @@ export default function HomePage() {
           </AppBar>
         </Box>
       </Grid>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={4}>
+      <Grid container spacing={1}>
+        <Grid item xs={12} sm={3}>
           <SideBarPage />
         </Grid>
-        <Grid item xs={12} sm={8}>
+        <Grid item xs={12} sm={9}>
           <ContentPage />
         </Grid>
       </Grid>
@@ -158,5 +172,13 @@ const Btn1 = styled(Button)(({ theme }) => ({
     padding: '5px 0px',
     marginLeft: '0px',
     fontSize: '12px',
+  }
+}))
+
+
+const GridContent = styled(Grid)(({ theme }) => ({
+  marginLeft: '120px',
+  '@media (min-width: 300px) and (max-width: 800px)': {
+    marginLeft: '0px',
   }
 }))

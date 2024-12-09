@@ -1,16 +1,16 @@
-.bg-colorLogin{
+.bg-colorLogin {
   background-color: rgb(31, 31, 31);
   height: 150vh;
 }
 
-.bg-colorSignup{
+.bg-colorSignup {
   background-color: #121212;
   height: 120vh;
 }
 
-.hrTag{
+.hrTag {
   border: 1px solid white;
-  height: 1px; 
+  height: 1px;
   color: rgb(85, 84, 84);
   opacity: 0.4;
   width: 80%;
@@ -18,20 +18,56 @@
   align-items: center;
 }
 
-.link{
+.link {
   color: white;
 }
 
-.link:hover{
+.link:hover {
   color: rgb(6, 180, 6);
 }
 
-.link1{
+.link1 {
   float: left;
   margin-top: -15px;
   color: rgb(6, 180, 6);
 }
 
-span{
+span {
   opacity: 0.6;
+}
+
+.SideLabel {
+  position: absolute;
+  top: 83px;
+  left: 40px;
+  margin-left: 5px;
+}
+
+.itemName{
+  color: white;
+}
+
+.logoimg{
+  width: 150px;
+  height: 140px;
+  border-radius: 100px;
+}
+
+.logoimg1{
+  width: 150px;
+  height: 140px;
+}
+
+.Title:hover{
+  text-decoration: underline;
+}
+
+@media (min-width: 300px) and (max-width: 800px) {
+  .SideLabel {
+    position: none;
+    top: 0px;
+    left: 0px;
+    margin-left: 0px;
+  }
+
 }
