@@ -58,8 +58,19 @@ span {
   height: 140px;
 }
 
+.logoimg2{
+  width: 50px;
+  height: 40px;
+  border-radius: 10px;
+}
+
 .Title:hover{
   text-decoration: underline;
+}
+
+.verify{
+  margin-left: 5px;
+  font-size: 15px;
 }
 
 @media (min-width: 300px) and (max-width: 800px) {
@@ -68,6 +79,5 @@ span {
     top: 0px;
     left: 0px;
     margin-left: 0px;
-  }
-
+  } 
 }

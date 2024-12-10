@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Box, Typography, Grid } from '@mui/material';
 import { styled } from '@mui/system';
 import { ArtistsPage } from './content/ArtistsPage';

@@ -1,27 +1,41 @@
 import React, { useEffect, useState } from 'react';
 import { artists, albums, radios } from './DataArtists';
-import { TextField, Button, Box, Typography, Container, InputLabel, Grid } from '@mui/material';
-import { display, styled } from '@mui/system';
+import { Button, Box, Typography, Container} from '@mui/material';
+import { styled } from '@mui/system';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { IconButton } from '@mui/material';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import { SingerPage } from './SingerPage';
 
 
 export const ArtistsPage = () => {
   const [data, setData] = useState([]);
   const [visible, setVisible] = useState(5);
+  const [singerId,setSingerId] = useState(null);
 
   useEffect(() => {
     setData(artists);
-  }, []);
+  },[]);
 
   const loadData = () => {
     setVisible(data.length);
   }
+  
+  const handleSingerId = (id) => {
+    setSingerId(id);
+    // console.log(id);
+  }
+
+  useEffect(() => {
+    if (singerId !== null) {
+      console.log("Selected singerId:", singerId);
+    }
+  }, [singerId]);
 
   return (
     <>
+    {singerId && <SingerPage singerid={singerId}/>}
       <Box sx={{ px: 2 }}>
         <Typography id="modal-modal-title" variant="h5" component="h1">
           <b className='Title'>Popular Artists</b>
@@ -32,7 +46,7 @@ export const ArtistsPage = () => {
       </Box>
       {data.slice(0, visible).map((item) => {
         return (
-          <Gridcontent>
+          <Gridcontent onClick={() => handleSingerId(item.id)}>
             <Box sx={{ flexGrow: 1 }}>
               <Styles key={item.id}>
                 <CardContent>

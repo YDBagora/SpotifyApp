@@ -34,7 +34,7 @@ export default function HomePage() {
     <Box sx={{ flexGrow: 1, backgroundColor: 'black', height: 'auto',}}>
       <Grid container spacing={2} sx={{ textAlign: 'center', alignItems: 'center', }}>
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar sx={{ backgroundColor: "black" }}>
+          <AppBar sx={{ backgroundColor: "black", p:0 }}>
             <Toolbar>
               <Grid item xs={1}>
                 <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
@@ -149,7 +149,7 @@ const Btn = styled(Button)(({ theme }) => ({
     transform: 'scale(1.1)',
   },
   '@media (min-width: 300px) and (max-width: 800px)': {
-    width: '40%',
+    width: '30%',
     padding: '5px 0px',
     marginRight: '0px',
     fontSize: '12px',
@@ -168,7 +168,7 @@ const Btn1 = styled(Button)(({ theme }) => ({
     transform: 'scale(1.1)',
   },
   '@media (min-width: 300px) and (max-width: 800px)': {
-    width: '40%',
+    width: '30%',
     padding: '5px 0px',
     marginLeft: '0px',
     fontSize: '12px',

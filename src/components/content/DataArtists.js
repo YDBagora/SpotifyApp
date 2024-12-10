@@ -39,7 +39,7 @@ import s37 from '../../assets/songs/song37.mp3';
 import s38 from '../../assets/songs/song38.mp3';
 import s39 from '../../assets/songs/song39.mp3';
 import s40 from '../../assets/songs/song40.mp3';
-
+// images for artists
 import p1 from '../../assets/images/p1.jpeg';
 import p2 from '../../assets/images/p2.jpeg';
 import p3 from '../../assets/images/pr3.jpeg';
@@ -60,7 +60,7 @@ import p17 from '../../assets/images/p17.jpeg';
 import p18 from '../../assets/images/p18.jpeg';
 import p19 from '../../assets/images/p19.jpeg';
 import p20 from '../../assets/images/p20.jpeg';
-
+// images for albums
 import album from '../../assets/images/album.jpeg';
 import album1 from '../../assets/images/album1.jpeg';
 import album2 from '../../assets/images/album2.jpeg';
@@ -70,7 +70,7 @@ import album5 from '../../assets/images/album5.jpeg';
 import album6 from '../../assets/images/album6.jpeg';
 import album7 from '../../assets/images/album7.jpeg';
 import album8 from '../../assets/images/album8.jpeg';
-
+// images for radios
 import radio1 from '../../assets/images/radio1.jpeg';
 import radio2 from '../../assets/images/radio2.jpeg';
 import radio3 from '../../assets/images/radio3.jpeg';
@@ -84,9 +84,16 @@ export const artists = [
     title: "Artist",
     name: "Pritam",
     image: p1,
+    fans: '22,548,207',
     songs: [
-      { title: "Song 1", file: s1 },
-      { title: "Song 2", file: s2 }
+      { id: 1, title: "Song 1", file: s1, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
+
     ]
   },
   {
@@ -94,189 +101,298 @@ export const artists = [
     title: "Artist",
     name: "Sachin-Jigar",
     image: p2,
+    fans: '12,548,207',
     songs: [
-      { title: "Song 1", file: s3 },
-      { title: "Song 2", file: s4 }
+      { id: 1, title: "Song 1", file: s3, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s4, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 3,
     title: "Artist",
     name: "A.R. Rahman",
+    fans: '32,548,207',
     image: p3,
     songs: [
-      { title: "Song 1", file: s5 },
-      { title: "Song 2", file: s6 }
+      { id: 1, title: "Song 1", file: s5, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s6, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 4,
     title: "Artist",
     name: "Arijit Singh",
+    fans: '42,548,207',
     image: p4,
     songs: [
-      { title: "Song 1", file: s7 },
-      { title: "Song 2", file: s8 }
+      { id: 1, title: "Song 1", file: s7, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s8, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 5,
     title: "Artist",
     name: "Vishal-Shekhar",
+    fans: '548,207',
     image: p5,
     songs: [
-      { title: "Song 1", file: s9 },
-      { title: "Song 2", file: s10 }
+      { id: 1, title: "Song 1", file: s9, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s10, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 6,
     title: "Artist",
     name: "Atif Aslam",
+    fans: '2,548,207',
     image: p6,
     songs: [
-      { title: "Song 1", file: s11 },
-      { title: "Song 2", file: s12 }
+      { id: 1, title: "Song 1", file: s11, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s12, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 7,
     title: "Artist",
     name: "Vishal Mishra",
+    fans: '21,548,207',
     image: p7,
     songs: [
-      { title: "Song 1", file: s13 },
-      { title: "Song 2", file: s14 }
+      { id: 1, title: "Song 1", file: s13, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s14, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 8,
     title: "Artist",
     name: "Diljit Dosanjh",
+    fans: '40,548,207',
     image: p8,
     songs: [
-      { title: "Song 1", file: s15 },
-      { title: "Song 2", file: s16 }
+      { id: 1, title: "Song 1", file: s15, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s16, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 9,
     title: "Artist",
     name: "Yo Yo Honey Singh",
+    fans: '38,548,207',
     image: p9,
     songs: [
-      { title: "Song 1", file: s17 },
-      { title: "Song 2", file: s18 }
+      { id: 1, title: "Song 1", file: s17, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s18, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 10,
     title: "Artist",
     name: "Sidhu Moosewala",
+    fans: '44,548,207',
     image: p10,
     songs: [
-      { title: "Song 1", file: s19 },
-      { title: "Song 2", file: s20 }
+      { id: 1, title: "Song 1", file: s19, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s20, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 11,
     title: "Artist",
     name: "Udit Narayan",
+    fans: '48,207',
     image: p11,
     songs: [
-      { title: "Song 1", file: s21 },
-      { title: "Song 2", file: s22 }
+      { id: 1, title: "Song 1", file: s21, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s22, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 12,
     title: "Artist",
     name: "Badshah",
+    fans: '01,548,207',
     image: p12,
     songs: [
-      { title: "Song 1", file: s23 },
-      { title: "Song 2", file: s24 }
+      { id: 1, title: "Song 1", file: s23, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s24, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 13,
     title: "Artist",
     name: "Darshan Raval",
+    fans: '13,548,207',
     image: p13,
     songs: [
-      { title: "Song 1", file: s25 },
-      { title: "Song 2", file: s26 }
+      { id: 1, title: "Song 1", file: s25, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s26, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 14,
     title: "Artist",
     name: "Anuv Jain",
+    fans: '58,207',
     image: p14,
     songs: [
-      { title: "Song 1", file: s27 },
-      { title: "Song 2", file: s28 }
+      { id: 1, title: "Song 1", file: s27, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s28, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 15,
     title: "Artist",
     name: "Sonu Nigam",
+    fans: '648,207',
     image: p15,
     songs: [
-      { title: "Song 1", file: s29 },
-      { title: "Song 2", file: s30 }
+      { id: 1, title: "Song 1", file: s29, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s30, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 16,
     title: "Artist",
     name: "Kishore Kumar",
+    fans: '22,548,207',
     image: p16,
     songs: [
-      { title: "Song 1", file: s31 },
-      { title: "Song 2", file: s32 }
+      { id: 1, title: "Song 1", file: s31, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s32, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 17,
     title: "Artist",
     name: "Kumar Sanu",
+    fans: '22,548,207',
     image: p17,
     songs: [
-      { title: "Song 1", file: s33 },
-      { title: "Song 2", file: s34 }
+      { id: 1, title: "Song 1", file: s33, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s34, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 18,
     title: "Artist",
     name: "Dilip Kumar",
+    fans: '22,548,207',
     image: p18,
     songs: [
-      { title: "Song 1", file: s35 },
-      { title: "Song 2", file: s36 }
+      { id: 1, title: "Song 1", file: s35, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s36, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 19,
     title: "Artist",
     name: "Lata Mangeshkar",
+    fans: '22,548,207',
     image: p19,
     songs: [
-      { title: "Song 1", file: s37 },
-      { title: "Song 2", file: s38 }
+      { id: 1, title: "Song 1", file: s37, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s38, list: '224,548,207', time: '4:30' },
+      { id: 3, title: "Song 3", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 4, title: "Song 4", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 5, title: "Song 5", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 6, title: "Song 6", file: s2, list: '224,548,207', time: '4:30' },
+      { id: 7, title: "Song 7", file: s2, list: '224,548,207', time: '4:30' },
     ]
   },
   {
     id: 20,
     title: "Artist",
-    name: "Shreya Ghoshal",
+    name: "Shreya Ghoshal",  
+    fans: '22,548,207',
     image: p20,
     songs: [
-      { title: "Song 1", file: s39 },
-      { title: "Song 2", file: s40 }
+      { id: 1, title: "Song 1", file: s39, list: '224,548,207', time: '4:30' },
+      { id: 2, title: "Song 2", file: s40, list: '224,548,207', time: '4:30' }
     ]
   }
 ];
