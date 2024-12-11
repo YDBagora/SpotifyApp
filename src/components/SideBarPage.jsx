@@ -40,7 +40,7 @@ export const SideBarPage = () => {
               <small>Privacy Police</small>
             </Grid>
           </Grid>
-          <br/>
+          <br />
           <Grid container spacing={2} sx={{ opacity: '0.8' }}>
             <Grid item xs={12} sm={3}>
               <small>Cookies</small>
@@ -52,7 +52,7 @@ export const SideBarPage = () => {
               <small>Accessibility</small>
             </Grid>
           </Grid>
-          <br/>
+          <br />
           <LanguageBtn startIcon={<LanguageIcon />}><b>English</b></LanguageBtn>
         </Grid>
       </Grid>

@@ -13,7 +13,7 @@ export const CompanyDescription = () => {
       </Typography>
       <br />
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={2}>
+        <Grid item sm={2}>
           <Typography id="modal-modal-title" variant="h6" component="h1" sx={{ fontSize: '18px' }}>
             <b>Company</b>
           </Typography>
@@ -23,7 +23,7 @@ export const CompanyDescription = () => {
             <p>For the Record</p>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={2}>
+        <Grid item sm={2}>
           <Typography id="modal-modal-title" variant="h6" component="h1" sx={{ fontSize: '18px' }}>
             <b>Communities</b>
           </Typography>
@@ -35,7 +35,7 @@ export const CompanyDescription = () => {
             <p>Vendors</p>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={2}>
+        <Grid item sm={2}>
           <Typography id="modal-modal-title" variant="h6" component="h1" sx={{ fontSize: '18px' }}>
             <b>Useful links</b>
           </Typography>
@@ -44,7 +44,7 @@ export const CompanyDescription = () => {
             <p>Free Mobile App</p>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={3}>
+        <Grid item sm={3}>
           <Typography id="modal-modal-title" variant="h6" component="h1" sx={{ fontSize: '18px' }}>
             <b>Spotify Plans</b>
           </Typography>
@@ -56,7 +56,7 @@ export const CompanyDescription = () => {
             <p>Spotify Free</p>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={3}>
+        <Grid item sm={3}>
           <BtnIcon><InstagramIcon sx={{fontSize: '20px'}}/></BtnIcon>
           <BtnIcon><TwitterIcon sx={{fontSize: '20px'}}/></BtnIcon>
           <BtnIcon><FacebookIcon sx={{fontSize: '20px'}}/></BtnIcon>

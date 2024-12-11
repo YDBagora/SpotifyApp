@@ -1,19 +1,28 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { artists } from './DataArtists';
-import { fontSize, styled } from '@mui/system';
-import { Button, Box, Typography, Container } from '@mui/material';
+import { styled } from '@mui/system';
+import { Button, Box, Typography } from '@mui/material';
 import { Grid } from '@mui/material';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import PauseIcon from '@mui/icons-material/Pause';
 import { IconButton } from '@mui/material';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
+import DoNotDisturbIcon from '@mui/icons-material/DoNotDisturb';
+import SensorsIcon from '@mui/icons-material/Sensors';
+import NewReleasesIcon from '@mui/icons-material/NewReleases';
+import ShareIcon from '@mui/icons-material/Share';
 
 export const SingerPage = ({ singerid }) => {
   const [selectedArtist, setSelectedArtist] = useState(null);
   const [currentSong, setCurrentSong] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
   const audioRef = useRef(null);
+  const open = Boolean(anchorEl);
 
   useEffect(() => {
     if (singerid) {
@@ -44,6 +53,13 @@ export const SingerPage = ({ singerid }) => {
     }
   };
 
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <Box>
@@ -54,11 +70,14 @@ export const SingerPage = ({ singerid }) => {
           backgroundPosition: 'center',
           height: '40vh',
           padding: '16px',
+          '@media (min-width: 300px) and (max-width: 800px)': {
+            height: '30vh',
+          }
         }}
         >
           <Grid item xs={12}>
             <Typography>
-              <VerifiedIcon sx={{ color: '#4cb3ff' ,mb: -1}} />
+              <VerifiedIcon sx={{ color: '#4cb3ff', mb: -1 }} />
               <small className='verify'>Verified Artist</small>
             </Typography>
             <Typographys id="modal-modal-title" variant="h1" component="h1">
@@ -73,7 +92,48 @@ export const SingerPage = ({ singerid }) => {
         <Grid item xs={12}>
           <BtnPlay><PlayArrowIcon sx={{ fontSize: '40px' }} /></BtnPlay>
           <BtnFollow><b>Follow</b></BtnFollow>
-          <BtnMore><MoreHorizIcon /></BtnMore>
+          <BtnMore
+            id="demo-positioned-button"
+            aria-controls={open ? 'demo-positioned-menu' : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? 'true' : undefined}
+            onClick={handleClick}
+          >
+            <MoreHorizIcon />
+          </BtnMore>
+          <Menu
+            id="demo-positioned-menu"
+            aria-labelledby="demo-positioned-button"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+          >
+            <MenuItem onClick={handleClose}><PersonAddAlt1Icon sx={{ opacity: '0.8', mr: 2 }} />
+              <b>Follow</b>
+            </MenuItem>
+            <MenuItem onClick={handleClose}><DoNotDisturbIcon sx={{ opacity: '0.8', mr: 2 }} />
+              <b>Don't play this artist</b>
+            </MenuItem>
+            <MenuItem onClick={handleClose}><SensorsIcon sx={{ opacity: '0.8', mr: 2 }} />
+              <b>Go to artist radio</b>
+            </MenuItem>
+            <MenuItem onClick={handleClose}><NewReleasesIcon sx={{ opacity: '0.8', mr: 2 }} />
+              <b>Report</b>
+            </MenuItem>
+            <MenuItem onClick={handleClose}><ShareIcon sx={{ opacity: '0.8', mr: 2 }} />
+              <b>Share</b>
+            </MenuItem>
+          </Menu>
+
+
         </Grid>
       </Grid>
 
@@ -84,24 +144,24 @@ export const SingerPage = ({ singerid }) => {
       {selectedArtist?.songs.map((data) => {
         return (
           <GridCont container spacing={2}>
-            <Grid item xs={12} sm={1} sx={{ textAlign: 'center', opacity: '0.8' }}>
+            <Grid item sm={1} sx={{ textAlign: 'center', opacity: '0.8' }}>
               {data?.id}
             </Grid>
-            <Grid item xs={12} sm={1} sx={{mt:-1,mb:1}}>
+            <Grid item sm={1} sx={{ mt: -1, mb: 1 }}>
               <img src={selectedArtist?.image} className='logoimg2' />
             </Grid>
-            <Grid item xs={12} sm={5} sx={{ textAlign: 'left' }}>
+            <Grid item sm={5} sx={{ textAlign: 'left' }}>
               {data?.title}
             </Grid>
-            <Grid item xs={12} sm={2} sx={{mt:-1}}>
+            <Grid item sm={2} sx={{ mt: -1 }}>
               <MainBtn onClick={() => togglePlayPause(data)}>
-                {currentSong?.id === data?.id && isPlaying ? <PauseIcon/>: <PlayArrowIcon/>}
+                {currentSong?.id === data?.id && isPlaying ? <PauseIcon /> : <PlayArrowIcon />}
               </MainBtn>
             </Grid>
-            <Grid item xs={12} sm={2}>
+            <Grid item sm={2}>
               {data?.list}
             </Grid>
-            <Grid item xs={12} sm={1}>
+            <Grid item sm={1}>
               {data?.time}
             </Grid>
           </GridCont>
@@ -139,7 +199,7 @@ const BtnFollow = styled(Button)({
   },
 });
 
-const BtnMore = styled(Button)({
+const BtnMore = styled(IconButton)({
   background: '#121212',
   borderRadius: '50%',
   color: 'white',

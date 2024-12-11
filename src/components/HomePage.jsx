@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -31,10 +31,10 @@ export default function HomePage() {
   }
 
   return (
-    <Box sx={{ flexGrow: 1, backgroundColor: 'black', height: 'auto',}}>
+    <Box sx={{ flexGrow: 1, backgroundColor: 'black', height: 'auto', }}>
       <Grid container spacing={2} sx={{ textAlign: 'center', alignItems: 'center', }}>
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar sx={{ backgroundColor: "black", p:0 }}>
+          <AppBar sx={{ backgroundColor: "black", p: 0 }}>
             <Toolbar>
               <Grid item xs={1}>
                 <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
@@ -57,7 +57,7 @@ export default function HomePage() {
                   }}
                 />
               </GridContent>
-              <Grid item xs={3}>
+              <Grid item xs={5}>
                 <Link to="/Signup">
                   <Btn1><b>Sign up</b></Btn1>
                 </Link>
@@ -86,19 +86,20 @@ export default function HomePage() {
   );
 }
 
-const IconBtn = styled(Button)(({ theme }) => ({
+const IconBtn = styled(IconButton)(({ theme }) => ({
   background: '#121212',
   color: 'white',
   textTransform: 'none',
   fontSize: '25px',
-  padding: '8px 0px',
+  padding: '10px',
   borderRadius: '80px',
   transition: 'transform 0.2s ease-in-out',
   '&:hover': {
     transform: 'scale(1.1)',
+    background: '#121212',
   },
   '@media (min-width: 300px) and (max-width: 800px)': {
-    fontSize: '15px',
+    fontSize: '10px',
   }
 }))
 
@@ -177,7 +178,7 @@ const Btn1 = styled(Button)(({ theme }) => ({
 
 
 const GridContent = styled(Grid)(({ theme }) => ({
-  marginLeft: '120px',
+  marginLeft: '150px',
   '@media (min-width: 300px) and (max-width: 800px)': {
     marginLeft: '0px',
   }

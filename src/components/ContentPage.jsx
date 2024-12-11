@@ -42,6 +42,6 @@ const StyledBox = styled(Box)({
 	scrollbarColor: 'transparent transparent',
 	'@media (min-width: 300px) and (max-width: 800px)': {
 		height: 'auto',
-		marginTop: '50px',
+		marginTop: '30px',
 	}
 });

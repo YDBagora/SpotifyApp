@@ -7,15 +7,23 @@ import IconButton from "@mui/material/IconButton";
 import { styled } from "@mui/material/styles";
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import GoogleIcon from '@mui/icons-material/Google';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import AppleIcon from '@mui/icons-material/Apple';
 import Grid from '@mui/material/Grid';
 import { TextField } from '@mui/material';
 import { InputLabel } from '@mui/material';
+import { GoogleOAuthProvider, GoogleLogin, useGoogleLogin } from '@react-oauth/google';
+import FacebookLogin from './FaceBookPage';
 
 
 export default function SignUpPage() {
+  const handleSuccess = (CredentialResponse) => {
+    console.log("Google Sign in Success", CredentialResponse);
+  }
+
+  const handleError = () => {
+    console.log("Google Sign in Failed")
+  }
+
   return (
     <div className='bg-colorSignup'>
       <React.Fragment>
@@ -40,29 +48,36 @@ export default function SignUpPage() {
                 <a href='#' className='link1'><small>Use phone number instead.</small></a>
               </Grid>
             </GridContainer>
-            <hr className='hrTag'/>
+            <hr className='hrTag' />
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <Btn variant="outlined" startIcon={<GoogleIcon sx={{ color: 'red' }}/>}><b>Continue width Google</b></Btn>
+                <Btn variant="outlined">
+                  <GoogleOAuthProvider clientId='533510300795-ripesv42rb9ehrsoi6eoi5u5odd9hrad.apps.googleusercontent.com'>
+                    <GoogleLogin
+                      onSuccess={handleSuccess}
+                      onError={handleError}
+                    >
+                    </GoogleLogin>
+                  </GoogleOAuthProvider>
+                </Btn>
               </Grid>
               <Grid item xs={12}>
-                <Btn variant="outlined" startIcon={<FacebookIcon sx={{ color: 'blue'}}/>}><b>Continue width FaceBook</b></Btn>
+                <FacebookLogin />
               </Grid>
               <Grid item xs={12}>
-                <Btn variant="outlined" startIcon={<AppleIcon sx={{ color: 'white' }}/>}><b>Continue width Apple</b></Btn>
+                <Btn variant="outlined" startIcon={<AppleIcon sx={{ color: 'white' }} />}><b>Continue width Apple</b></Btn>
               </Grid>
             </Grid>
-            <hr className='hrTag'/>
+            <hr className='hrTag' />
             <Grid item xs={12}>
-                <span>Already have an account? </span><a href='#' className='link'> Log in here</a>
-              </Grid>
+              <span>Already have an account? </span><a href='#' className='link'> Log in here</a>
+            </Grid>
           </MainBox>
         </Container>
       </React.Fragment>
     </div>
   )
 }
-
 
 const MainBox = styled(Box)(({ theme }) => ({
   position: 'absolute',
@@ -123,7 +138,7 @@ const TxtFiled = styled(TextField)(({ theme }) => ({
     color: 'white',
   },
   '& .MuiInputBase-input': {
-    color: 'white',  
+    color: 'white',
   },
   alignItems: 'center',
   border: '1px solid white',
@@ -153,3 +168,13 @@ const GridContainer = styled(Grid)(({ theme }) => ({
     left: '0%',
   }
 }))
+
+
+
+
+
+
+
+// 533510300795-ripesv42rb9ehrsoi6eoi5u5odd9hrad.apps.googleusercontent.com
+
+// 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
