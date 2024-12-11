@@ -11,7 +11,7 @@ import AppleIcon from '@mui/icons-material/Apple';
 import Grid from '@mui/material/Grid';
 import { TextField } from '@mui/material';
 import { InputLabel } from '@mui/material';
-import { GoogleOAuthProvider, GoogleLogin, useGoogleLogin } from '@react-oauth/google';
+import { GoogleOAuthProvider, GoogleLogin} from '@react-oauth/google';
 import FacebookLogin from './FaceBookPage';
 
 
