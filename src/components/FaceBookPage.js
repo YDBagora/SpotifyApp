@@ -16,7 +16,7 @@ const FacebookLogin = () => {
 
     window.fbAsyncInit = function () {
       window.FB.init({
-        appId: '1288090058995032',
+        appId: '',
         cookie: true,
         xfbml: true,
         version: 'v21.0'
