@@ -11,7 +11,7 @@ import AppleIcon from '@mui/icons-material/Apple';
 import Grid from '@mui/material/Grid';
 import { TextField } from '@mui/material';
 import { InputLabel } from '@mui/material';
-import { GoogleOAuthProvider, GoogleLogin} from '@react-oauth/google';
+import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import FacebookLogin from './FaceBookPage';
 
 
@@ -51,7 +51,7 @@ export default function SignUpPage() {
             <hr className='hrTag' />
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <Btn variant="outlined">
+                <BoxBtn>
                   <GoogleOAuthProvider clientId='533510300795-ripesv42rb9ehrsoi6eoi5u5odd9hrad.apps.googleusercontent.com'>
                     <GoogleLogin
                       onSuccess={handleSuccess}
@@ -59,13 +59,13 @@ export default function SignUpPage() {
                     >
                     </GoogleLogin>
                   </GoogleOAuthProvider>
-                </Btn>
+                </BoxBtn>
               </Grid>
               <Grid item xs={12}>
                 <FacebookLogin />
               </Grid>
               <Grid item xs={12}>
-                <Btn variant="outlined" startIcon={<AppleIcon sx={{ color: 'white' }} />}><b>Continue width Apple</b></Btn>
+                <Btn variant="outlined" startIcon={<AppleIcon sx={{ color: 'rgb(85, 84, 84)', position: 'absolute', left: '10px', top: '10px' }} />}>Sign in width Apple</Btn>
               </Grid>
             </Grid>
             <hr className='hrTag' />
@@ -107,13 +107,12 @@ const LogoTxt = styled(Typography)(({ theme }) => ({
 
 const Btn = styled(Button)(({ theme }) => ({
   width: '60%',
-  borderRadius: '80px',
-  background: '#121212',
-  color: 'white',
+  borderRadius: '5px',
+  background: 'white',
+  color: 'Black',
   border: '1px solid white',
   padding: '8px',
   textTransform: 'none',
-  fontSize: '16px',
   '@media (min-width: 300px) and (max-width: 800px)': {
     width: '100%',
   }
@@ -170,10 +169,15 @@ const GridContainer = styled(Grid)(({ theme }) => ({
 }))
 
 
-
-
-
-
+const BoxBtn = styled(Box)(({ theme }) => ({
+  width: '60%',
+  margin: 'auto',
+  background: '121212',
+  color: 'white',
+  '@media (min-width: 300px) and (max-width: 800px)': {
+    width: '100%',
+  }
+}))
 
 // 533510300795-ripesv42rb9ehrsoi6eoi5u5odd9hrad.apps.googleusercontent.com
 

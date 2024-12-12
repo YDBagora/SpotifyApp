@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import React, { useEffect } from 'react';
 
-const FacebookLogin = () => {
+const FacebookPage = () => {
 
   useEffect(() => {
     (function (d, s, id) {
@@ -45,23 +45,22 @@ const FacebookLogin = () => {
 
   return (
     <div>
-     <Btn variant="outlined" onClick={handleLogin} startIcon={<FacebookIcon sx={{ color: 'blue' }} />}><b>Continue width FaceBook</b></Btn>
+     <Btn variant="outlined" onClick={handleLogin} startIcon={<FacebookIcon sx={{color: 'blue',position: 'absolute',left: '10px',top:'10px'}} />}>Sign in with FaceBook</Btn>
     </div>
   );
 };
 
-export default FacebookLogin;
+export default FacebookPage;
 
 
 const Btn = styled(Button)(({ theme }) => ({
   width: '60%',
-  borderRadius: '80px',
-  background: '#121212',
-  color: 'white',
+  borderRadius: '5px',
+  background: 'white',
+  color: 'Black',
   border: '1px solid white',
   padding: '8px',
   textTransform: 'none',
-  fontSize: '16px',
   '@media (min-width: 300px) and (max-width: 800px)': {
     width: '100%',
   }
