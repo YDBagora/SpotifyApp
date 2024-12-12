@@ -40,7 +40,7 @@ export default function LoginPage() {
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <BoxBtn>
-                  <GoogleOAuthProvider clientId='533510300795-ripesv42rb9ehrsoi6eoi5u5odd9hrad.apps.googleusercontent.com'>
+                  <GoogleOAuthProvider clientId=''>
                     <GoogleLogin
                       onSuccess={handleSuccess}
                       onError={handleError}
